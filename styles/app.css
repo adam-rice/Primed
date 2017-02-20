@@ -33,6 +33,11 @@ input {
     text-align: center;
 }
 
+#forecast-header {
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
 #forecast-container {
     border: 1px solid red;
     display: flex;
