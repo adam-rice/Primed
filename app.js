@@ -39,9 +39,11 @@ primed.controller('homeController', ['$scope', 'cityService', function($scope, c
 
 }]);
 
-primed.controller('forecastController', ['$scope', '$resource', 'cityService', function($scope, $resource, cityService) {
+primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams cityService) {
 
     $scope.city = cityService.city;
+    
+    $scope.days = $routeParams.days || 5;
 
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?appid=7725b4973215a5596e6c67a9eeb3bb22&units=imperial', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
     
