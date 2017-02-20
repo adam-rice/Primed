@@ -1,1 +1,21 @@
-<p>forecast</p>
+<h2 id="forecast-header">{{ city }} Forecast</h2>
+
+<div id="forecast-container">
+
+    <article class="weathercard" ng-repeat="weather in weatherResult.list">
+
+        <h3 class="weathercard-header">{{ convertToDate(weather.dt) | date: 'EEEE' }}</h3>
+
+        <div class="weathercard-body">
+
+            <p>Daytime High: {{ simpleTemp(weather.temp.max) }}&deg;</p>
+
+            <p>Daytime Low: {{ simpleTemp(weather.temp.min) }}&deg;</p>
+
+            <p>Calling for {{ weather.weather[0].description }}.</p>
+
+        </div>
+
+    </article>
+    
+</div>
