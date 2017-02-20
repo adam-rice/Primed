@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-const primed = angular.module('primed', ['ngRoute', 'ngResource']);
+var primed = angular.module('primed', ['ngRoute', 'ngResource']);
 
 primed.config(function($routeProvider) {
   $routeProvider
@@ -16,9 +16,13 @@ primed.config(function($routeProvider) {
 });
 
 primed.controller('homeController', ['$scope', function($scope) {
+    
+    $scope.name = 'John';
 
 }]);
 
 primed.controller('forecastController', ['$scope', function($scope) {
 
+    $scope.name = 'John';
+    
 }]);
