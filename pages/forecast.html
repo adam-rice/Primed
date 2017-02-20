@@ -1,1 +1,13 @@
 <p>forecast for {{ city }}</p>
+
+<article class="weathercard" ng-repeat="weather in weatherResult.list">
+
+    <h2>{{ weather.dt }}</h2>
+    
+    <div class="weathercard-body">
+    
+        <p>Daytime temperature: {{ weather.temp.day }}</p>
+    
+    </div>
+
+</article>

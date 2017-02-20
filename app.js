@@ -16,7 +16,7 @@ primed.config(function($routeProvider) {
 //SERVICE
 primed.service('cityService', function() {
     
-    this.city = "Denver, CO";
+    this.city = "Denver";
     
 });
 
@@ -35,8 +35,11 @@ primed.controller('forecastController', ['$scope', '$resource', 'cityService', f
 
     $scope.city = cityService.city;
     
-    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily', {
-        callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?appid=7725b4973215a5596e6c67a9eeb3bb22&units=imperial', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+    
+    $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: 5 });
+    
+    console.log($scope.weatherResult);
     
 }]);
    
