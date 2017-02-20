@@ -35,5 +35,8 @@ primed.controller('forecastController', ['$scope', '$resource', 'cityService', f
 
     $scope.city = cityService.city;
     
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily', {
+        callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+    
 }]);
    
