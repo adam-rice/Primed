@@ -39,7 +39,11 @@ primed.controller('forecastController', ['$scope', '$resource', 'cityService', f
     
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: 5 });
     
-    console.log($scope.weatherResult);
+    $scope.simpleTemp = function(temp) {
+        
+        return Math.floor(temp);
+        
+    }
     
 }]);
    
