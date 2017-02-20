@@ -16,7 +16,7 @@ primed.config(function($routeProvider) {
 //SERVICE
 primed.service('cityService', function() {
     
-    this.city = "Denver";
+//    this.city = "Denver";
     
 });
 
@@ -43,7 +43,14 @@ primed.controller('forecastController', ['$scope', '$resource', 'cityService', f
         
         return Math.floor(temp);
         
-    }
+    };
+    
+    $scope.convertToDate = function(date) {
+        
+        return new Date(date * 1000);
+        
+    };
+    
     
 }]);
    
