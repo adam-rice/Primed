@@ -13,15 +13,27 @@ primed.config(function($routeProvider) {
   });
 });
 
-primed.controller('homeController', ['$scope', function($scope) {
+//SERVICE
+primed.service('cityService', function() {
     
-    $scope.name = 'home';
+    this.city = "Denver, CO";
+    
+});
+
+//CONTROLLERS
+primed.controller('homeController', ['$scope', 'cityService', function($scope, cityService) {
+    
+    $scope.city = cityService.city;
+    
+    $scope.$watch('city', function() {
+        cityService.city = $scope.city;
+    });
 
 }]);
 
-primed.controller('forecastController', ['$scope', function($scope) {
+primed.controller('forecastController', ['$scope', 'cityService', function($scope, cityService) {
 
-    $scope.name = 'forecast';
+    $scope.city = cityService.city;
     
 }]);
    
