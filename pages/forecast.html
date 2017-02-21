@@ -15,17 +15,12 @@
 
     <article class="weathercard" ng-repeat="weather in weatherResult.list">
 
-        <h3 class="weathercard-header">{{ convertToDate(weather.dt) | date: 'EEEE M/d' }}</h3>
-
-        <div class="weathercard-body">
-
-            <p>Daytime High: {{ simpleTemp(weather.temp.max) }}&deg;</p>
-
-            <p>Daytime Low: {{ simpleTemp(weather.temp.min) }}&deg;</p>
-
-            <p>Calling for {{ weather.weather[0].description }}.</p>
-
-        </div>
+        <daily 
+               day="weather" 
+               round="simpleTemp(temp)" 
+               convert-to-date="convertToDate(date)" 
+               date-format="EEEE M/d">
+        </daily>
 
     </article>
     

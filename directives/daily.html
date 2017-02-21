@@ -1,0 +1,11 @@
+<div class="weathercard-body">
+    
+    <h3 class="weathercard-header">{{ convertToDate({ date: day.dt }) | date: dateFormat }}</h3>
+    
+    <p>Daytime High: {{ round({ temp: day.temp.max }) }}&deg;</p>
+    
+    <p>Daytime Low: {{ round({ temp: day.temp.min }) }}&deg;</p>
+    
+    <p>Calling for {{ day.weather[0].description }}.</p>
+        
+</div>
