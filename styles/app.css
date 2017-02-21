@@ -1,6 +1,7 @@
 body {
   background-color: #00b9f1;
-  font-family: "Alegreya", serif; }
+  font-family: "Alegreya", serif;
+  height: 100vh; }
 
 nav {
   width: 100%;

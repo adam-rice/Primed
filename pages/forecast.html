@@ -1,10 +1,12 @@
 <h2 id="forecast-header">{{ city }} Forecast</h2>
 
+Days: <a href="#/forecast/3">3</a> | <a href="#/forecast/5">5</a> | <a href="#/forecast/7">7</a>
+
 <div id="forecast-container">
 
     <article class="weathercard" ng-repeat="weather in weatherResult.list">
 
-        <h3 class="weathercard-header">{{ convertToDate(weather.dt) | date: 'EEEE' }}</h3>
+        <h3 class="weathercard-header">{{ convertToDate(weather.dt) | date: 'EEEE M/d' }}</h3>
 
         <div class="weathercard-body">
 
