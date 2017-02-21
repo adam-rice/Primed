@@ -24,8 +24,8 @@ nav {
   #navbar-nav a {
     color: #f9320c; }
 
-.container {
-  margin: 50px;
+.container, #days-selector {
+  margin: 25px;
   text-align: center; }
 
 input {
