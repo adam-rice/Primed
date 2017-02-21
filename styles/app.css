@@ -34,6 +34,13 @@ input {
 #forecast-header {
   font-size: 1.5em; }
 
+#days-selector a {
+  text-decoration: none;
+  color: #f9c00c; }
+
+.active {
+  background-color: #f9320c; }
+
 #forecast-header, .weathercard-header {
   font-weight: 800;
   text-transform: capitalize; }

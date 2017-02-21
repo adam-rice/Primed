@@ -2,7 +2,10 @@
 
 <section id="days-selector">
 
-    Days: <a href="#/forecast/3">3</a> | <a href="#/forecast/5">5</a> | <a href="#/forecast/7">7</a>
+    Days: 
+    <a href="#/forecast/3" ng-class="{ 'active': days === '3' }">3</a> | 
+    <a href="#/forecast/5" ng-class="{ 'active': days === '5' }">5</a> | 
+    <a href="#/forecast/7" ng-class="{ 'active': days === '7' }">7</a>
 
 </section>
 
