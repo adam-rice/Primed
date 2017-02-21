@@ -39,7 +39,7 @@ primed.controller('homeController', ['$scope', 'cityService', function($scope, c
 
 }]);
 
-primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams cityService) {
+primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
 
     $scope.city = cityService.city;
     

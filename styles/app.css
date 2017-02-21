@@ -7,8 +7,7 @@ nav { width: 100%; background-color: #f9c00c; position: relative; }
 #navbar-header { color: #f9320c; font-size: 2em; margin-left: 30px; }
 
 #navbar-nav { margin-right: 40px; }
-
-a { color: #7200da; }
+#navbar-nav a { color: #7200da; }
 
 .container { margin: 50px; text-align: center; }
 
