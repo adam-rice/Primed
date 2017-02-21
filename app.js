@@ -43,7 +43,7 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
 
     $scope.city = cityService.city;
     
-    $scope.days = $routeParams.days || 5;
+    $scope.days = $routeParams.days || 2;
 
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?appid=7725b4973215a5596e6c67a9eeb3bb22&units=imperial', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
     

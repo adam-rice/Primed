@@ -10,7 +10,6 @@ body {
 nav {
     width: 100%;
     background-color: $pc;
-    position: relative;
 }
 
 #navbar {
@@ -36,6 +35,7 @@ nav {
 .container, #days-selector {
     margin: 25px;
     text-align: center;
+    border: 1px solid pink;
 }
 
 input {
@@ -44,6 +44,7 @@ input {
 
 #forecast-header {
     font-size: 1.5em;
+    border: 1px solid pink;
 }
 
 #days-selector {
@@ -53,9 +54,9 @@ input {
     }
 }
 
- .active {
-            background-color: $tc;
-        }
+.active {
+    background-color: $tc;
+}
 
 #forecast-header, .weathercard-header {
     font-weight: 800;
@@ -77,5 +78,5 @@ input {
 }
 
 .weathercard-body {
-    background-color: bisque;
+    padding: 5px;
 }

@@ -5,8 +5,7 @@ body {
 
 nav {
   width: 100%;
-  background-color: #7200da;
-  position: relative; }
+  background-color: #7200da; }
 
 #navbar {
   padding: 8px;
@@ -26,13 +25,15 @@ nav {
 
 .container, #days-selector {
   margin: 25px;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid pink; }
 
 input {
   text-align: center; }
 
 #forecast-header {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  border: 1px solid pink; }
 
 #days-selector a {
   text-decoration: none;
@@ -58,6 +59,6 @@ input {
   padding: 8px; }
 
 .weathercard-body {
-  background-color: bisque; }
+  padding: 5px; }
 
 /*# sourceMappingURL=app.css.map */
