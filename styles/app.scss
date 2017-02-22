@@ -42,23 +42,34 @@ nav {
 #navbar-nav {
     margin-right: 40px;
     a {
-        color: $tc;
+        color: $pc;
+        &:hover {
+            color: $sc;
+        }
     }
 }
 
 .container, #days-selector {
     margin: 25px;
     text-align: center;
-    border: 1px solid pink;
+}
+
+#inputs-container {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
+    border: none;
+    border-bottom: 2px solid $b;
+    margin: 10px auto 40px auto;
     text-align: center;
+    width: 220px;
+    outline: none;
 }
 
-#forecast-header {
+#forecast-header, .selection-header {
     font-size: 1.5em;
-    border: 1px solid pink;
 }
 
 #days-selector {
@@ -81,7 +92,6 @@ input {
     border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
 }
 

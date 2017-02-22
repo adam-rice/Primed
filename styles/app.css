@@ -31,19 +31,28 @@ nav {
 #navbar-nav {
   margin-right: 40px; }
   #navbar-nav a {
-    color: #f9320c; }
+    color: #7200da; }
+    #navbar-nav a:hover {
+      color: #f9c00c; }
 
 .container, #days-selector {
   margin: 25px;
-  text-align: center;
-  border: 1px solid pink; }
-
-input {
   text-align: center; }
 
-#forecast-header {
-  font-size: 1.5em;
-  border: 1px solid pink; }
+#inputs-container {
+  display: flex;
+  flex-direction: column; }
+
+input {
+  border: none;
+  border-bottom: 2px solid #000;
+  margin: 10px auto 40px auto;
+  text-align: center;
+  width: 220px;
+  outline: none; }
+
+#forecast-header, .selection-header {
+  font-size: 1.5em; }
 
 #days-selector a {
   text-decoration: none;
@@ -60,7 +69,6 @@ input {
   border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center; }
 
 .weathercard {
