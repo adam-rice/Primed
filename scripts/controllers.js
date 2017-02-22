@@ -1,10 +1,16 @@
 //CONTROLLERS
-primed.controller('homeController', ['$scope', '$location', 'cityService', function($scope, $location, cityService) {
+primed.controller('homeController', ['$scope', '$location', 'cityService', 'gifService', function($scope, $location, cityService, gifService) {
     
     $scope.city = cityService.city;
     
     $scope.$watch('city', function() {
         cityService.city = $scope.city;
+    });
+    
+    $scope.theme = gifService.theme;
+    
+    $scope.$watch('theme', function() {
+       gifService.theme = $scope.theme; 
     });
     
     $scope.submit = function() {
