@@ -63,7 +63,7 @@ nav {
     flex-direction: column;
 }
 
-input {
+.form-input {
     border: none;
     border-bottom: 2px solid $b;
     margin: 10px auto 40px auto;
@@ -74,6 +74,11 @@ input {
         border-bottom-color: $sc;
         transition-duration: 0.4s;
     }
+}
+
+#selection-submit {
+    font-family: $ff;
+    background-color: $w;
 }
 
 .btn {

@@ -15,7 +15,7 @@ primed.controller('homeController', ['$scope', '$location', 'cityService', funct
 
 primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
 
-    $scope.city = cityService.city;
+    $scope.city = cityService.city || 'denver, CO';
     
     $scope.days = $routeParams.days || '3';
 
