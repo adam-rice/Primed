@@ -19,12 +19,13 @@ primed.controller('homeController', ['$scope', '$location', 'cityService', 'gifS
 
 }]);
 
-primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
-
+primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', 'gifService', function($scope, $resource, $routeParams, cityService, gifService) {
+    
+    //Weather
     $scope.city = cityService.city || 'denver, CO';
     
     $scope.days = $routeParams.days || '3';
-
+    
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?appid=7725b4973215a5596e6c67a9eeb3bb22&units=imperial', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
     
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days });
@@ -40,5 +41,12 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
         return new Date(date * 1000);
         
     };
+    
+    //Theme
+    $scope.theme = gifService.theme || 'seinfeld';
+    
+    $scope.giphyAPI = $resource('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+    
+    $scope.themeResult = $scope.giphyAPI.get({ tag: $scope.theme });
     
 }]);
