@@ -90,7 +90,7 @@ input {
     }
 }
 
-#forecast-header, .selection-header, #selection-submit {
+#forecast-header, .selection-header, #selection-submit, .weathercard-header {
     font-size: 1.5em;
 }
 
@@ -126,9 +126,23 @@ input {
 }
 
 .weathercard {
-    border: 4px solid blue;
-    margin: 10px;
+    position: relative;
+    box-shadow: 
+    0 0 0 1px hsl(194, 100%, 55%),
+    0 0 0 2px hsl(194, 100%, 58%),
+    0 0 0 5px hsl(194, 100%, 62%),
+    0 0 0 7px hsl(194, 100%, 67%),
+    0 0 0 9px hsl(194, 100%, 70%),
+    0 0 0 12px hsl(194, 100%, 75%),
+    0 0 0 16px hsl(194, 100%, 80%),
+    0 0 0 20px hsl(194, 100%, 85%),
+    0 0 0 25px hsl(194, 100%, 90%);
+    margin: 40px;
     padding: 8px;
+}
+
+.weathercard-desc {
+    margin-bottom: 18px;
 }
 
 .weathercard-body {
