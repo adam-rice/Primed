@@ -30,11 +30,14 @@ nav {
 
 #navbar-nav {
   margin-right: 40px; }
-  #navbar-nav a {
-    color: #7200da; }
-    #navbar-nav a:hover {
-      color: #f9c00c;
-      transition-duration: 0.4s; }
+
+.material-icons {
+  text-decoration: none;
+  color: #7200da; }
+  .material-icons:hover {
+    color: #f9c00c;
+    transition-duration: 0.8s;
+    transform: rotateY(210deg); }
 
 .container {
   margin: 150px 0;
@@ -55,7 +58,7 @@ input {
     border-bottom-color: #f9c00c;
     transition-duration: 0.4s; }
 
-#selection-submit {
+.btn {
   border: 2px solid #000;
   border-radius: 5px;
   color: #f9c00c;
@@ -63,33 +66,37 @@ input {
   padding: 4px;
   text-decoration: none;
   width: 60px; }
-  #selection-submit:hover {
+  .btn:hover {
     color: #7200da;
     transition-duration: 0.4s; }
 
 #forecast-header, .selection-header, #selection-submit {
   font-size: 1.5em; }
 
-#days-selector a {
-  text-decoration: none;
-  color: #f9c00c; }
-
-.active {
-  background-color: #f9320c; }
-
 #forecast-header, .weathercard-header {
   font-weight: 800;
   text-transform: capitalize; }
 
 #forecast-container {
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
 #days-selector {
+  font-size: 1.5em;
   margin: 25px;
-  text-align: center; }
+  display: flex;
+  align-items: center; }
+  #days-selector .days-counter {
+    text-decoration: none;
+    margin: 0 12px; }
+    #days-selector .days-counter:hover {
+      color: #f9320c;
+      transition-duration: 0.4s; }
+
+.active {
+  color: #7200da;
+  border-bottom: 1px solid #7200da; }
 
 .weathercard {
   border: 4px solid blue;
