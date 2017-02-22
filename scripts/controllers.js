@@ -1,17 +1,21 @@
 //CONTROLLERS
-primed.controller('homeController', ['$scope', 'cityService', function($scope, cityService) {
+primed.controller('homeController', ['$scope', '$location', 'cityService', function($scope, $location, cityService) {
     
     $scope.city = cityService.city;
     
     $scope.$watch('city', function() {
         cityService.city = $scope.city;
     });
+    
+    $scope.submit = function() {
+        $location.path('/forecast');
+    };
 
 }]);
 
 primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', function($scope, $resource, $routeParams, cityService) {
 
-    $scope.city = cityService.city;
+    $scope.city = cityService.city || 'denver, CO';
     
     $scope.days = $routeParams.days || '3';
 

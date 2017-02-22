@@ -63,7 +63,7 @@ nav {
     flex-direction: column;
 }
 
-input {
+.form-input {
     border: none;
     border-bottom: 2px solid $b;
     margin: 10px auto 40px auto;
@@ -74,6 +74,11 @@ input {
         border-bottom-color: $sc;
         transition-duration: 0.4s;
     }
+}
+
+#selection-submit {
+    font-family: $ff;
+    background-color: $w;
 }
 
 .btn {
@@ -87,6 +92,7 @@ input {
     &:hover {
         color: $pc;
         transition-duration: 0.4s;
+        cursor: pointer;
     }
 }
 
@@ -112,17 +118,17 @@ input {
     align-items: center;
     .days-counter {
         text-decoration: none;
+        color: $b;
         margin: 0 12px;
         &:hover {
-        color: $tc;
-        transition-duration: 0.4s;
-    }
+            color: $tc;
+            transition-duration: 0.4s;
+        }
     }
 }
 
 .active {
-    color: $pc;
-    border-bottom: 1px solid $pc;
+    border-bottom: 1px solid $tc;
 }
 
 .weathercard {
@@ -142,7 +148,7 @@ input {
 }
 
 .weathercard-desc {
-    margin-bottom: 18px;
+    margin: 8px 0 18px 0;
 }
 
 .weathercard-body {
