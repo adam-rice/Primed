@@ -2,14 +2,13 @@
 @import "mixins";
 
 body {
-    background-color: $bg;
+    background-color: $w;
     font-family:      $ff;
-    height: 100vh;
+    height:           100vh;
 }
 
 nav {
     width: 100%;
-    background-color: $pc;
 }
 
 #navbar {
@@ -20,42 +19,79 @@ nav {
 }
 
 #navbar-header {
-    color: $sc;
-    font-size: 2em;
+    font-size: 3em;
     margin-left: 30px;
+}
+
+.brand-red {
+    color: $tc;
+}
+
+.brand-yellow {
+    color: $sc;
+}
+
+.brand-purple {
+    color: $pc;
+}
+
+.brand-blue {
+    color: $bg;
 }
 
 #navbar-nav {
     margin-right: 40px;
-    a {
-        color: $tc;
+}
+
+.material-icons {
+    text-decoration: none;
+    color: $pc;
+    &:hover {
+        color: $sc;
+        transition-duration: 0.8s;
+        transform: rotateY(210deg);
     }
 }
 
-.container, #days-selector {
-    margin: 25px;
+.container {
+    margin: 150px 0;
     text-align: center;
-    border: 1px solid pink;
+}
+
+#inputs-container {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
+    border: none;
+    border-bottom: 2px solid $b;
+    margin: 10px auto 40px auto;
     text-align: center;
-}
-
-#forecast-header {
-    font-size: 1.5em;
-    border: 1px solid pink;
-}
-
-#days-selector {
-    a {
-        text-decoration: none;
-        color: $sc;
+    width: 220px;
+    outline: none;
+    &:focus {
+        border-bottom-color: $sc;
+        transition-duration: 0.4s;
     }
 }
 
-.active {
-    background-color: $tc;
+.btn {
+    border: 2px solid $b;
+    border-radius: 5px;
+    color: $sc;
+    margin: 0 auto;
+    padding: 4px;
+    text-decoration: none;
+    width: 60px;
+    &:hover {
+        color: $pc;
+        transition-duration: 0.4s;
+    }
+}
+
+#forecast-header, .selection-header, #selection-submit, .weathercard-header {
+    font-size: 1.5em;
 }
 
 #forecast-header, .weathercard-header {
@@ -64,17 +100,49 @@ input {
 }
 
 #forecast-container {
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
 }
 
+#days-selector {
+    font-size: 1.5em;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    .days-counter {
+        text-decoration: none;
+        margin: 0 12px;
+        &:hover {
+        color: $tc;
+        transition-duration: 0.4s;
+    }
+    }
+}
+
+.active {
+    color: $pc;
+    border-bottom: 1px solid $pc;
+}
+
 .weathercard {
-    border: 4px solid blue;
-    margin: 10px;
+    position: relative;
+    box-shadow: 
+    0 0 0 1px hsl(194, 100%, 55%),
+    0 0 0 2px hsl(194, 100%, 58%),
+    0 0 0 5px hsl(194, 100%, 62%),
+    0 0 0 7px hsl(194, 100%, 67%),
+    0 0 0 9px hsl(194, 100%, 70%),
+    0 0 0 12px hsl(194, 100%, 75%),
+    0 0 0 16px hsl(194, 100%, 80%),
+    0 0 0 20px hsl(194, 100%, 85%),
+    0 0 0 25px hsl(194, 100%, 90%);
+    margin: 40px;
     padding: 8px;
+}
+
+.weathercard-desc {
+    margin-bottom: 18px;
 }
 
 .weathercard-body {
