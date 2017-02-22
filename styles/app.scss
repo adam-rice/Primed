@@ -92,6 +92,7 @@ nav {
     &:hover {
         color: $pc;
         transition-duration: 0.4s;
+        cursor: pointer;
     }
 }
 
@@ -126,7 +127,6 @@ nav {
 }
 
 .active {
-    color: $pc;
     border-bottom: 1px solid $pc;
 }
 

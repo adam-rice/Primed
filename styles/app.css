@@ -72,7 +72,8 @@ nav {
   width: 60px; }
   .btn:hover {
     color: #7200da;
-    transition-duration: 0.4s; }
+    transition-duration: 0.4s;
+    cursor: pointer; }
 
 #forecast-header, .selection-header, #selection-submit, .weathercard-header {
   font-size: 1.5em; }
@@ -99,7 +100,6 @@ nav {
       transition-duration: 0.4s; }
 
 .active {
-  color: #7200da;
   border-bottom: 1px solid #7200da; }
 
 .weathercard {
