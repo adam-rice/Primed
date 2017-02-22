@@ -9,7 +9,8 @@ primed.directive('daily', function() {
             day: '=',
             round: '&',
             convertToDate: '&',
-            dateFormat: '@'
+            dateFormat: '@',
+            theme: '='
         }
     }
     
