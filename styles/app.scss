@@ -45,12 +45,13 @@ nav {
         color: $pc;
         &:hover {
             color: $sc;
+            transition-duration: 0.4s;
         }
     }
 }
 
-.container, #days-selector {
-    margin: 25px;
+.container {
+    margin: 150px 0;
     text-align: center;
 }
 
@@ -66,9 +67,27 @@ input {
     text-align: center;
     width: 220px;
     outline: none;
+    &:focus {
+        border-bottom-color: $sc;
+        transition-duration: 0.4s;
+    }
 }
 
-#forecast-header, .selection-header {
+#selection-submit {
+    border: 2px solid $b;
+    border-radius: 5px;
+    color: $sc;
+    margin: 0 auto;
+    padding: 4px;
+    text-decoration: none;
+    width: 60px;
+    &:hover {
+        color: $pc;
+        transition-duration: 0.4s;
+    }
+}
+
+#forecast-header, .selection-header, #selection-submit {
     font-size: 1.5em;
 }
 
@@ -93,6 +112,11 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+#days-selector {
+    margin: 25px;
+    text-align: center;
 }
 
 .weathercard {
