@@ -118,16 +118,17 @@ nav {
     align-items: center;
     .days-counter {
         text-decoration: none;
+        color: $b;
         margin: 0 12px;
         &:hover {
-        color: $tc;
-        transition-duration: 0.4s;
-    }
+            color: $tc;
+            transition-duration: 0.4s;
+        }
     }
 }
 
 .active {
-    border-bottom: 1px solid $pc;
+    border-bottom: 1px solid $tc;
 }
 
 .weathercard {

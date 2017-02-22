@@ -94,13 +94,14 @@ nav {
   align-items: center; }
   #days-selector .days-counter {
     text-decoration: none;
+    color: #000;
     margin: 0 12px; }
     #days-selector .days-counter:hover {
       color: #f9320c;
       transition-duration: 0.4s; }
 
 .active {
-  border-bottom: 1px solid #7200da; }
+  border-bottom: 1px solid #f9320c; }
 
 .weathercard {
   position: relative;
