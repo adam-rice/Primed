@@ -2,14 +2,13 @@
 @import "mixins";
 
 body {
-    background-color: $bg;
+    background-color: $w;
     font-family:      $ff;
-    height: 100vh;
+    height:           100vh;
 }
 
 nav {
     width: 100%;
-    background-color: $pc;
 }
 
 #navbar {
@@ -20,9 +19,24 @@ nav {
 }
 
 #navbar-header {
-    color: $sc;
-    font-size: 2em;
+    font-size: 3em;
     margin-left: 30px;
+}
+
+.brand-red {
+    color: $tc;
+}
+
+.brand-yellow {
+    color: $sc;
+}
+
+.brand-purple {
+    color: $pc;
+}
+
+.brand-blue {
+    color: $bg;
 }
 
 #navbar-nav {

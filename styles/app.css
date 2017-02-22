@@ -1,11 +1,10 @@
 body {
-  background-color: #00b9f1;
-  font-family: "Alegreya", serif;
+  background-color: #fff;
+  font-family: "VT323", monospace;
   height: 100vh; }
 
 nav {
-  width: 100%;
-  background-color: #7200da; }
+  width: 100%; }
 
 #navbar {
   padding: 8px;
@@ -14,9 +13,20 @@ nav {
   justify-content: space-between; }
 
 #navbar-header {
-  color: #f9c00c;
-  font-size: 2em;
+  font-size: 3em;
   margin-left: 30px; }
+
+.brand-red {
+  color: #f9320c; }
+
+.brand-yellow {
+  color: #f9c00c; }
+
+.brand-purple {
+  color: #7200da; }
+
+.brand-blue {
+  color: #00b9f1; }
 
 #navbar-nav {
   margin-right: 40px; }
