@@ -110,7 +110,7 @@ nav {
   padding: 8px; }
 
 .weathercard-desc {
-  margin-bottom: 18px; }
+  margin: 8px 0 18px 0; }
 
 .weathercard-body {
   padding: 5px; }
