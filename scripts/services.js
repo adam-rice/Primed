@@ -8,6 +8,6 @@ primed.service('cityService', function() {
 primed.service('gifService', function() {
     
     
-//    this.theme = 'bears';
+//    this.theme = 'seinfeld';
     
 });

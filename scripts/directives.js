@@ -10,7 +10,6 @@ primed.directive('daily', function() {
             round: '&',
             convertToDate: '&',
             dateFormat: '@'
-//            single: '='
         }
     }
     

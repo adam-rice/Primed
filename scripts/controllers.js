@@ -50,6 +50,4 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
     
     $scope.themeResult = $scope.giphyAPI.get();
     
-    console.log($scope);
-    
 }]);
