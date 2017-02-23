@@ -19,7 +19,7 @@ primed.controller('homeController', ['$scope', '$location', 'cityService', 'gifS
 
 }]);
 
-primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 'cityService', 'gifService', function($scope, $resource, $routeParams, cityService, gifService) {
+primed.controller('forecastController', ['$scope', '$resource', '$routeParams', '$log', 'cityService', 'gifService', function($scope, $resource, $routeParams, $log, cityService, gifService) {
     
     //Weather
     $scope.city = cityService.city || 'denver, CO';
@@ -31,22 +31,25 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days });
     
     $scope.simpleTemp = function(temp) {
-        
         return Math.floor(temp);
-        
     };
     
     $scope.convertToDate = function(date) {
-        
         return new Date(date * 1000);
-        
     };
     
     //Theme
     $scope.theme = gifService.theme || 'seinfeld';
     
-    $scope.giphyAPI = $resource('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC', { callback: 'JSON_CALLBACK' }, { get: { method: 'JSONP' }});
+    $scope.searchTheme = 'http://api.giphy.com/v1/gifs/search?q=' 
+        + $scope.theme 
+        + '&api_key=dc6zaTOxFJmzC&limit=' 
+        + $scope.days;
     
-    $scope.themeResult = $scope.giphyAPI.get({ tag: $scope.theme });
+    $scope.giphyAPI = $resource($scope.searchTheme);  //removing JSONP requirement allows response
+    
+    $scope.themeResult = $scope.giphyAPI.get();
+    
+    console.log($scope);
     
 }]);
