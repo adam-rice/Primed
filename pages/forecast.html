@@ -16,11 +16,17 @@
     <article class="weathercard" ng-repeat="weather in weatherResult.list">
 
         <daily 
-               day="weather" 
-               round="simpleTemp(temp)" 
-               convert-to-date="convertToDate(date)" 
-               date-format="EEEE M/d">
+            day="weather" 
+            round="simpleTemp(temp)" 
+            convert-to-date="convertToDate(date)" 
+            date-format="EEEE M/d">
         </daily>
+        
+        <img 
+            ng-src="{{ themeResult.data[$index].images.original.url }}" 
+            height="150" 
+            width="150"
+        />
 
     </article>
     
