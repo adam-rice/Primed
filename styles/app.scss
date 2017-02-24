@@ -48,6 +48,7 @@ nav {
     color: $pc;
     &:hover {
         color: $sc;
+        cursor: pointer;
         transition-duration: 0.8s;
         transform: rotateY(210deg);
     }
@@ -96,7 +97,8 @@ nav {
     }
 }
 
-#forecast-header, .selection-header, #selection-submit, .weathercard-header {
+#forecast-header, .selection-header, 
+#selection-submit, .weathercard-header {
     font-size: 1.5em;
 }
 
@@ -109,6 +111,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.lighting {
+    margin-left: 4px;
+    &:hover {
+        transform: rotateY(0deg);
+        transform: rotateZ(360deg);
+    }
 }
 
 #days-selector {

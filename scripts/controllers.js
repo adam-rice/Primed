@@ -19,7 +19,7 @@ primed.controller('homeController', ['$scope', '$location', 'cityService', 'gifS
 
 }]);
 
-primed.controller('forecastController', ['$scope', '$resource', '$routeParams', '$log', 'cityService', 'gifService', function($scope, $resource, $routeParams, $log, cityService, gifService) {
+primed.controller('forecastController', ['$scope', '$resource', '$routeParams', '$location', '$route', 'cityService', 'gifService', 'randomService', function($scope, $resource, $routeParams, $location, $route, cityService, gifService, randomService) {
     
     //Weather
     $scope.city = cityService.city || 'denver, CO';
@@ -49,5 +49,16 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
     $scope.giphyAPI = $resource($scope.searchTheme);  //removing JSONP requirement allows response
     
     $scope.themeResult = $scope.giphyAPI.get();
+    
+    $scope.randomTheme = function() {
+        var a = [
+            'birds', 'dance', 'ocean', 
+            'computer', 'monster', 'star trek', 
+            'drink', 'sunny in philadelphia', 
+            'breaking bad', 'bill murray'
+        ];
+        gifService.theme = a[Math.floor(Math.random()*a.length)];
+        $route.reload();
+    };
     
 }]);

@@ -1,15 +1,19 @@
-<h2 id="forecast-header">{{ city }} Forecast</h2>
+<h2 id="forecast-header" tabindex="0">{{ city }} Forecast</h2>
 
 <section id="days-selector">
 
-    Days: 
+    <p tabindex="0">Days:</p>
     <a class="days-counter" href="#/forecast/3" ng-class="{ 'active': days === '3' }">3</a> | 
     <a class="days-counter" href="#/forecast/5" ng-class="{ 'active': days === '5' }">5</a> | 
     <a class="days-counter" href="#/forecast/7" ng-class="{ 'active': days === '7' }">7</a>
-    <a class="material-icons" href="#/">settings</a>
+    <a class="material-icons" href="#/" name="return-home-button">settings</a>
+    <i class="material-icons lighting" 
+       ng-click="randomTheme()"
+       tabindex="0"
+       name="get-random-theme-button">flash_on
+    </i>
 
 </section>
-
 
 <div id="forecast-container">
 
@@ -22,11 +26,15 @@
             date-format="EEEE M/d">
         </daily>
         
-        <img 
-            ng-src="{{ themeResult.data[$index].images.original.url }}" 
-            height="150" 
-            width="150"
-        />
+        <a ng-href="{{ themeResult.data[$index].images.original.url }}"
+           name="link-to-image">
+            <img 
+                ng-src="{{ themeResult.data[$index].images.original.url }}" 
+                height="150" 
+                width="150"
+            />
+        </a>
+        
 
     </article>
     

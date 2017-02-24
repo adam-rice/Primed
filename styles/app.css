@@ -36,6 +36,7 @@ nav {
   color: #7200da; }
   .material-icons:hover {
     color: #f9c00c;
+    cursor: pointer;
     transition-duration: 0.8s;
     transform: rotateY(210deg); }
 
@@ -75,7 +76,8 @@ nav {
     transition-duration: 0.4s;
     cursor: pointer; }
 
-#forecast-header, .selection-header, #selection-submit, .weathercard-header {
+#forecast-header, .selection-header,
+#selection-submit, .weathercard-header {
   font-size: 1.5em; }
 
 #forecast-header, .weathercard-header {
@@ -86,6 +88,12 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+
+.lighting {
+  margin-left: 4px; }
+  .lighting:hover {
+    transform: rotateY(0deg);
+    transform: rotateZ(360deg); }
 
 #days-selector {
   font-size: 1.5em;
