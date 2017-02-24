@@ -76,7 +76,8 @@ nav {
     transition-duration: 0.4s;
     cursor: pointer; }
 
-#forecast-header, .selection-header, #selection-submit, .weathercard-header {
+#forecast-header, .selection-header,
+#selection-submit, .weathercard-header {
   font-size: 1.5em; }
 
 #forecast-header, .weathercard-header {

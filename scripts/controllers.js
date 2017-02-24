@@ -53,7 +53,7 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
     $scope.randomTheme = function() {
         var a = [
             'birds', 'dance', 'ocean', 
-            'computer', 'monster', 'flower', 
+            'computer', 'monster', 'star trek', 
             'drink', 'sunny in philadelphia', 
             'breaking bad', 'bill murray'
         ];

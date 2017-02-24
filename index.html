@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" ng-app="primed">
     <head>
-        <title>Primed</title>
         <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/reset.css" type="text/css">
         <link rel="stylesheet" href="styles/app.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <title>Primed</title>
     </head>
     <body>
         <header>
             <nav>
                 <div id="navbar">
                     <div id="navbar-header">
-                        <h1>
+                        <h1 tabindex="0">
                             <font class="brand-red">    P</font>
                             <font class="brand-yellow"> R</font>
                             <font class="brand-purple"> I</font>
@@ -24,7 +24,10 @@
                     </div>
                     <ul id="navbar-nav">
                         <li>
-                            <a class="material-icons" href="#">home</a>
+                            <a 
+                               class="material-icons" 
+                               href="#"
+                               name="home-button">home</a>
                         </li>
                     </ul>
                 </div>
