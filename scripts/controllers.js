@@ -51,7 +51,12 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
     $scope.themeResult = $scope.giphyAPI.get();
     
     $scope.randomTheme = function() {
-        var a = ['birds', 'dance', 'ocean', 'computer'];
+        var a = [
+            'birds', 'dance', 'ocean', 
+            'computer', 'monster', 'flower', 
+            'drink', 'sunny in philadelphia', 
+            'breaking bad', 'bill murray'
+        ];
         gifService.theme = a[Math.floor(Math.random()*a.length)];
         $route.reload();
     };
