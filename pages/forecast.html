@@ -22,11 +22,14 @@
             date-format="EEEE M/d">
         </daily>
         
-        <img 
-            ng-src="{{ themeResult.data[$index].images.original.url }}" 
-            height="150" 
-            width="150"
-        />
+        <a ng-href="{{ themeResult.data[$index].images.original.url }}">
+            <img 
+                ng-src="{{ themeResult.data[$index].images.original.url }}" 
+                height="150" 
+                width="150"
+            />
+        </a>
+        
 
     </article>
     
