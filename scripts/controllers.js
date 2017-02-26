@@ -58,6 +58,7 @@ primed.controller('forecastController', ['$scope', '$resource', '$routeParams', 
             'breaking bad', 'bill murray'
         ];
         gifService.theme = a[Math.floor(Math.random()*a.length)];
+        cityService.city = $scope.city;
         $route.reload();
     };
     
