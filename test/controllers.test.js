@@ -48,8 +48,8 @@ describe('forecastController', function() {
     $controller = _$controller_;
   }));
 
-    describe('$scope.city', function() {
-      it('', function() {
+    describe('default values', function() {
+      it('sets the city days and theme to default values when no input is passed', function() {
           var $scope = {city: null, days: null, theme: null};
           var controller = $controller('forecastController', { $scope: $scope });
           expect($scope.city).toEqual('denver, CO');
@@ -57,5 +57,12 @@ describe('forecastController', function() {
           expect($scope.theme).toEqual('seinfeld');
         });
     });
+    
+    describe('theme result and weather result', function() {
+        it('gets data back from the APIs when requested', function() {
+            var $scope = {city: null, days: null, theme: null};
+            var controller = $controller('forecastController', { $scope: $scope });
+        })
+    })
      
 });
