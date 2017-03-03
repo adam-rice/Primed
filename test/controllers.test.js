@@ -29,11 +29,11 @@ describe('homeController', function() {
     });
     
      describe('$scope.submit', function() {
-            it('Submit will take the user to the forecast page', function() {
-                var $scope = {};
-                var controller = $controller('homeController', { $scope: $scope, $location });
-                $scope.submit();
-                expect($location.path).toEqual('/forecast');
-            });
+        it('Submit will take the user to the forecast page', function() {
+            var $scope = {};
+            var controller = $controller('homeController', { $scope: $scope, $location });
+            $scope.submit();
+            expect($location.path).toEqual('/forecast');
+        });
      });
 });
