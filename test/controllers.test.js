@@ -38,6 +38,8 @@ describe('homeController', function() {
      });
 });
 
+/////////////////////////////////////////////////////////////////////////////////
+
 describe('forecastController', function() {
   beforeEach(module('primed'));
 
@@ -59,12 +61,21 @@ describe('forecastController', function() {
     });
     
     describe('simpleTemp', function() {
-        it('sets the returned value to a rounded number', function() {
+        it('sets the returned temp to a rounded number', function() {
             var $scope = {};
             var controller = $controller('forecastController', { $scope: $scope });
             var ans = $scope.simpleTemp(59.9);
             expect(ans).toEqual(60);
-        })
-    })
+        });
+    });
+    
+     describe('convertToDate', function() {
+        it('sets the returned date to a usable date', function() {
+            var $scope = {};
+            var controller = $controller('forecastController', { $scope: $scope });
+            var ans = $scope.convertToDate(1485766800);
+            expect(ans).toEqual('Mon Jan 30 2017 03:00:00 GMT-0600 (CST)');
+        });
+    });
      
 });
