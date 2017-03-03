@@ -58,10 +58,12 @@ describe('forecastController', function() {
         });
     });
     
-    describe('theme result and weather result', function() {
-        it('gets data back from the APIs when requested', function() {
-            var $scope = {city: null, days: null, theme: null};
+    describe('simpleTemp', function() {
+        it('sets the returned value to a rounded number', function() {
+            var $scope = {};
             var controller = $controller('forecastController', { $scope: $scope });
+            var ans = $scope.simpleTemp(59.9);
+            expect(ans).toEqual(60);
         })
     })
      
