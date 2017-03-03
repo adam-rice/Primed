@@ -31,9 +31,31 @@ describe('homeController', function() {
      describe('$scope.submit', function() {
         it('Submit will take the user to the forecast page', function() {
             var $scope = {};
-            var controller = $controller('homeController', { $scope: $scope, $location });
+            var controller = $controller('homeController', { $scope: $scope });
             $scope.submit();
             expect($location.path).toEqual('/forecast');
         });
      });
+});
+
+describe('forecastController', function() {
+  beforeEach(module('primed'));
+
+  var $controller;
+
+  beforeEach(inject(function(_$controller_){
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $controller = _$controller_;
+  }));
+
+    describe('$scope.city', function() {
+      it('', function() {
+          var $scope = {city: null, days: null, theme: null};
+          var controller = $controller('forecastController', { $scope: $scope });
+          expect($scope.city).toEqual('denver, CO');
+          expect($scope.days).toEqual('3');
+          expect($scope.theme).toEqual('seinfeld');
+        });
+    });
+     
 });
